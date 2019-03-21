@@ -1,0 +1,699 @@
+*{margin:0;padding:0;} 
+
+body{ margin: 0;padding: 0;overflow: hidden;}
+
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;;}
+
+*{text-decoration: none;list-style: none;}
+
+img{border: 0px;}
+
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 12px;padding: 0;margin: 0;}
+
+a,input,button{ outline:none; }
+
+.lf   {float:left;}
+.rt  {float:right;}
+.clear  {clear:both;}
+
+
+/*
+ * 
+ * homePage
+ * 
+ */
+
+/*轮播图高度*/
+.mui-slider{
+	height: 2.76rem;
+}
+/*中间部分两个按钮*/
+#top-one{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 2rem;
+	margin-top: 0.2rem;
+	background-color: white;
+}
+.qudaozhuce{
+	width: 3.3rem;
+	height: 1.55rem;
+	background-image: url(../img/beijingkuang.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-right: 0.15rem;
+}
+.mydingdan{
+	width: 3.3rem;
+	height: 1.55rem;
+	background-image: url(../img/beijingkuang.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 0.15rem;
+}
+#top-one img{
+	margin-top: 0.22rem;
+	margin-left: 0.1rem;
+	width: 1.29rem;
+	height: 1.1rem;
+}
+#top-one .mui-btn1{
+	width: 1.5rem;
+	height: 0.5rem;
+	background-color: #fb9200;
+	border-radius: 50px;
+	color: white;
+	margin-top: 0.52rem;
+	/*margin-left: 0.18rem;*/
+	border: none;
+	padding: 0.04rem 0 0 0;
+	font-size: 0.24rem;
+}
+/*产品分类导航条*/
+#productClass{
+	width: 100%;
+	height: 0.8rem;
+	margin-top: 0.2rem;
+	background-color: white;
+}
+#productClass ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	line-height: 0.8rem;
+}
+#productClass ul li{
+	color: #666666;
+	font-size: 0.28rem;
+}
+/*产品展示信息*/
+.productZhanshi{
+	width: 6.9rem;
+	height: 2.5rem;
+	/*border: 1px solid blue;*/
+	margin: 0 auto;
+	margin-top: 0.2rem;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	/*line-height: 2.45rem;*/
+}
+/*在img之前构造一个空的inline-block，实现img垂直居中*/
+.productZhanshi:before{
+    content:"";
+    display:inline-block;
+    height:100%;
+    vertical-align: middle;
+}
+.productZhanshi img{
+	width: 2.11rem;
+	height: 2.11rem;
+	margin:0 0.2rem 0 0.2rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.productZhanshi .jianjie{
+	display: inline-block;
+}
+.productZhanshi span{
+	position: relative;
+}
+.productZhanshi .biaoti{
+	font-size: 0.26rem;
+	top: 0.24rem;
+	color: #333333;
+	font-weight: 800;
+}
+.productZhanshi .jieshao{
+	font-size: 0.22rem;
+	top: 0.24rem;
+	color: #999999;
+}
+.productZhanshi .jiage{
+	font-size: 0.36rem;
+	top: 0.7rem;
+	color: #fb9200;
+}
+.productZhanshi .dinggou{
+	position: absolute;
+	width: 1.2rem;
+	height: 0.5rem;
+	background-color: #fb9200;
+	border-radius: 50px;
+	color: white;
+	border: none;
+	padding: 0.04rem 0 0 0;
+	font-size: 0.24rem;
+	top: 1.7rem;
+	right: 0.3rem;
+}
+.liukong{
+	width: 100%;
+	height: 1.5rem;
+}
+
+
+/*
+ * 
+ * task
+ * 
+ */
+
+/*header公共部分*/
+
+#shangjiaxzbg{
+	position: relative;
+	width: 100%;
+	height: 2.1rem;
+	background-color: white;
+	margin-top: 0.25rem;
+}
+.shangjiaxuzhi{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 6.86rem;
+	height: 1.75rem;
+	border-radius: 8px;
+	background-image: url(../img/shangjiaxuezhi.png);
+	background-size: 100% 100%;
+}
+/*城市选择下拉列表*/
+.mui-bar{
+	background-color: #363635;
+}
+.mui-bar .mui-btnab{
+	position: fixed;
+	color: white;
+	top: 0.24rem;
+}
+.mui-bar img{
+	position: fixed;
+	top: 20px;
+	width: 10px;
+	left: 65px;
+}
+/*
+ * 搜索产品
+ * 
+ */
+.mui-input-row{
+	position: fixed;
+	width: 5.34rem;
+	margin-left: 80px;
+	margin-top: 2px;
+}
+/*input框*/
+.mui-input-row .mui-input-clear{
+	background-color: #50504f;
+	height: 26.5px;
+	border-radius: 25px;
+}
+/*搜索框文字*/
+.mui-search .mui-placeholder{
+	padding-top: 0.08rem;
+	padding-left: 0.4rem;
+	color: white;
+	text-align: left;
+}
+/*搜索框图标*/
+.mui-search .mui-placeholder .mui-icon{
+	padding-top: 0.14rem;
+	position: absolute;
+	width: 0.3rem;
+	height: 0.3rem;
+	right: 0.6rem;
+	color: white;
+}
+.mui-search.mui-active input[type=search]{
+	color: white;
+}
+.mui-search.mui-active::before{
+	/*display: none;*/
+	padding-top: 0.14rem;
+	position: fixed;
+	width: 0.3rem;
+	height: 0.3rem;
+	right: 0.6rem;
+	color: white;
+}
+.mui-focusin>.mui-bar-nav{
+	position: fixed;
+}
+	
+
+/*商家须知button*/
+.shangjiaxuzhi button{
+	width: 2.1rem;
+    height: 0.5rem;
+    background-color: #fb9200;
+    border-radius: 50px;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+    border: none;
+    padding: 0 0 0 0;
+    font-size: 0.24rem;
+}
+
+/*任务列表*/
+.renwuliebiao:last-child{
+	margin-bottom: 0.5rem;
+}
+.renwuliebiao{
+	width: 6.9rem;
+	height: 2.9rem;
+	margin: 0 auto;
+	margin-top: 0.2rem;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+}
+.renwuliebiao img{
+	width: 100%;
+	height: 1.59rem;
+}
+.renwubiaoti .biaoti{
+	font-size:0.26rem;
+	color: #333333;
+	padding-left: 0.3rem;
+}
+.renwubiaoti .shijian{
+	font-size: 0.28rem;
+	color: #333333;
+	padding-left: 0.3rem;
+}
+.renwuanniu{
+	width: 2.6rem;
+	height: 0.6rem;
+	position: absolute;
+	bottom: 0.06rem;
+	right: 0.2rem;
+}
+/*
+ * 共用圆角橙色按钮
+ * 
+ * */
+.yuanjiaoButton{
+	color: white;
+	background-color: #fb9200;
+	width: 1.2rem;
+	height: 0.5rem;
+	font-size: 0.22rem;
+	border: none;
+	padding: 0.04rem 0 0 0;
+	border-radius: 50px;
+}
+
+
+/*
+ * 
+ * incom
+ * 
+ * */
+
+/*背景图top部分*/
+.shouyi-beijing-top{
+	/*position: absolute;*/
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 3.64rem;
+	background-image: url(../img/shouyibgimg.jpg);
+	background-size: 100% 100%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.shouyi-beijing-top .zongshouyi{
+	width: 4rem;
+	height: 1rem;
+	text-align: center;
+}
+.shouyi-beijing-top span:first-child{
+	font-size: 0.3rem;
+	color: #7e5c02;
+}
+.shouyi-beijing-top span:last-child{
+	font-size: 0.4rem;
+	color: #7e5c02;
+}
+
+/*累计收益*/
+.leijishouyi{
+	/*position: absolute;*/
+	top: 3.64rem;
+	width: 100%;
+	height: 1.66rem;
+	background-color: white;
+	margin-bottom: 0.2rem;
+	display: flex;
+	align-items: center;
+}
+.leijishouyiyou{
+	width: 3.5rem;
+	height: 1rem;
+	margin-left: 0.2rem;
+}
+.leijishouyi span:first-child{
+	margin-left: 0.1rem;
+	font-size: 0.2rem;
+	color: #666666;
+}
+.leijishouyi span:last-child{
+	font-size: 0.4rem;
+	color: #7e5c02;
+}
+.leijishouyi img{
+	display: block;
+	margin-left: 0.7rem;
+	width: 2.76rem;
+	height: 1.4rem;
+}
+ /*收益分类*/
+.shouyiclass{
+	width: 100%;
+	height: 0.66rem;
+	background-color: white;
+	color: #333333;
+	font-size: 0.28rem;
+	display: flex;
+	align-items: center;
+	padding-left: 0.3rem;
+	border-bottom: 1px solid #f7f7f9;
+}
+/*经理收益*/
+.jinglishouyi{
+	width: 100%;
+	height: 1.1rem;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #f7f7f9;
+}
+.jinglishouyi img{
+	width: 0.60rem;
+	height: 0.60rem;
+	margin-left: 0.3rem;
+}
+.jinglishouyi .jlsy{
+	margin-left: 0.2rem;
+	font-size: 0.32rem;
+}
+.jinglishouyi .jine{
+	margin-left: 2.6rem;
+	font-size: 0.3rem;
+	color: #666666;
+}
+.jinglishouyi span:last-child{
+	margin-left: 0.2rem;
+	color: #666666;
+	font-size: 0.36rem;
+}
+/*代理收益*/
+.dailishouyi{
+	width: 100%;
+	height: 1.1rem;
+	background-color: white;
+	display: flex;
+	align-items: center;
+}
+.dailishouyi img{
+	width: 0.60rem;
+	height: 0.60rem;
+	margin-left: 0.3rem;
+}
+.dailishouyi .dlsy{
+	margin-left: 0.2rem;
+	font-size: 0.32rem;
+}
+.dailishouyi .jine{
+	margin-left: 2.6rem;
+	font-size: 0.3rem;
+	color: #666666;
+}
+.dailishouyi .zrsy{
+	margin-left: 2.56rem;
+	font-size: 0.2rem;
+	color: #666666;
+}
+.dailishouyi .mui-icon-arrowright{
+	margin-left: 0.2rem;
+	color: #666666;
+	font-size: 0.36rem;
+}
+
+/*
+ * 
+ * 个人中心
+ * 
+ * */
+.mybeijing-top{
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 4.64rem;
+	background-image: url(../img/gerenzhongxinbgimg.jpg);
+	background-size: 100% 100%;
+}
+.mybeijing-top h1{
+	color: #333333;
+}
+.biaoqianlan span{
+	display: inline-block;
+}
+
+
+/*商家须知*/
+.sjxz{
+	background-color: #ffdb46;
+	border: none;
+	box-shadow: none;
+}
+.mui-icon-left-nav{color: #2a1d00;}
+.mui-icon-left-nav{color: #2a1d00;}
+.mui-contentxuzhi{
+	font-family: "宋体";
+	height: 100vh;
+	background-color: white;
+	padding: 0 0.4rem 0 0.4rem;
+	margin-top: 0.4rem;
+}
+.mui-content p{
+	font-size: 0.24rem;
+}
+
+/*收益详情页*/
+.shouyixiangqing{
+	background-color: #ffdb46;
+	box-shadow: none;
+	
+}
+.shouyidingdan .mui-table-view-cell a .neirong{
+	float: right;
+}
+.shouyidingdan .mui-table-view-cell:after{
+	left: 0;
+	background-color: #dddddd;
+}
+.shouyidingdan .mui-table-view:before{
+	background-color: #DDDDDD;
+}
+
+
+
+/*收益订单详情*/
+.shouyidingdan li{
+	height: 0.98rem;
+	font-size: 18px;
+	padding: 13px 15px;
+}
+.shouyidingdan li a{
+	height: 0.98rem;
+}
+
+
+
+
+/*
+ * 
+ *    任务分类弹窗
+ * 
+ * */
+/*弹窗*/
+#popLayerrenwu{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #B3B3B3;
+    position: fixed;
+    top: 44px;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 1.1rem;
+    left: 0;
+    z-index: 10000;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);/* 只支持IE6、7、8、9 */
+}
+#panelrenwu{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 44px;
+	width: 2.93rem;
+	height: 100vh;
+	z-index: 10001;
+	background-color: #ffffff;
+}
+#panelrenwu .mui-table-view-cell:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0.3rem;
+    height: 0.04rem;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #f7f7f9;
+}
+#panelrenwu .zuoa{
+	color: #333333;
+	font-size: 14px;
+}
+#panelrenwu .youa{
+	color: #333333;
+	float: right;
+	margin-right: 0.2rem;
+	font-size: 14px;
+}
+#panelrenwu .mui-table-view:after{
+	height: 0;
+}
+
+/*
+ * 
+ * 首页弹窗
+ * 
+ */
+/*
+ * 
+ *    任务分类弹窗
+ * 
+ * */
+/*弹窗*/
+#popLayerrenwua{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #B3B3B3;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 1.1rem;
+    left: 0;
+    z-index: 10000;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);/* 只支持IE6、7、8、9 */
+}
+#panelrenwua{
+	display: none;
+	position: fixed;
+	left: 0;
+	bottom: 50px;
+	width: 100%;
+	height: 9.16rem;
+	z-index: 10001;
+	background-color: #ffffff;
+}
+#panelrenwua .mui-table-view-cell:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0.3rem;
+    height: 0.04rem;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #f7f7f9;
+}
+#panelrenwua .mui-table-view{
+	width: 100%;
+	height: 8.39rem;
+}
+#panelrenwua .mui-table-view li{
+	width: 100%;
+	height: 42px;
+}
+#panelrenwua .mui-table-view .zuoa{
+	color: #333333;
+	font-size: 0.3rem;
+	color: #666666;
+}
+#panelrenwua .mui-table-view .youa{
+	color: #333333;
+	float: right;
+	font-size: 0.3rem;
+	color: #666666;
+}
+#panelrenwua .mui-table-view:after{
+	height: 0;
+}
+#panelrenwua .mui-table-view:before{
+	background-color: #f2f2f2;
+}
+#panelrenwua .daohangtiao{
+	width: 100%;
+	height: 0.8rem;
+}
+#panelrenwua .daohangneibu{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#panelrenwua .daohangneibu li{
+	width: 1.875rem;
+	height: 0.8rem;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.3rem;
+	color: #999999;
+}
+#panelrenwua .daohangneibu .iconarrfill_u-copy{
+	font-size: 0.26rem;
+	margin-left: 0.06rem;
+}
+#panelrenwua .daohangneibu .icon1{
+	font-size: 0.26rem;
+	margin-left: 0.06rem;
+}
+#panelrenwua .daohangneibu .iconloudou{
+	font-size: 0.26rem;
+	margin-left: 0.06rem;
+}
+#panelrenwua .daohangneibu .iconshangjiantou3{
+	position: absolute;
+	margin: 0.14rem 0 0 0.01rem;
+	font-size: 0.34rem;
+}
+#panelrenwua .daohangneibu .iconsjt{
+	position: absolute;
+	margin: 0.38rem 0 0 0.06rem;
+	font-size: 0.24rem;
+	color: #fb9200;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>收益</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+    	<style type="text/css">
+    		.mui-bar-tab .mui-tab-item.mui-active {
+		    	color: #ffcd00;
+			}
+    	</style>
+	</head>
+
+	<body>
+		<!--总收益-->
+		<header class="shouyi-beijing-top">
+			<div class="zongshouyi">
+				<span>总收益</span><br />
+				<span>166.899.00</span>
+			</div>
+		</header>
+		<!--累计收益+每日收益-->
+		<div class="mui-content">
+		    <div class="leijishouyi">
+		    	<div class="leijishouyiyou">
+			    	<span>累计收益(元)</span><br />
+			    	<span>128.999.00</span>
+		    	</div>
+		    	<img src="img/meirishouyi.png"/>
+		    </div>
+		    <!--收益分类-->
+			<div class="shouyiclass">
+				收益分类
+			</div>
+			<!--经理收益-->
+			<div class="jinglishouyi" id="shouyixiangqing">
+				<img src="img/jinglishouyiimg.png"/>
+				<span class="jlsy">经理收益</span>
+				<span class="jine">1.888.990.00</span>
+				<span class="mui-icon mui-icon-arrowright"></span>
+			</div>
+			<!--代理收益-->
+			<div class="dailishouyi">
+				<img src="img/dailishouyiimg.png"/>
+				<span class="dlsy">代理收益</span>
+				<div class="shangxialiangceng">
+					<span class="jine">1.888.990.00</span><br />
+					<span class="zrsy">昨日收益：55.66</span>
+				</div>
+				<span class="mui-icon mui-icon-arrowright"></span>
+			</div>
+			
+			<div style="width: 100%;height: 2rem;"></div>
+		</div>
+		
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab" style="box-shadow: none;background-color: white;">
+			<a id="index" class="mui-tab-item" href="index.html">
+				<span class="mui-icon iconfont iconshouye" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="task" class="mui-tab-item" href="task.html">
+				<span class="mui-icon iconfont iconrenwu" style="font-size: 19px;"><span class="mui-badge">2</span></span>
+				<span class="mui-tab-label">任务</span>
+			</a>
+			<a id="incom" class="mui-tab-item mui-active" href="incom.html">
+				<span class="mui-icon iconfont iconshouyi"></span>
+				<span class="mui-tab-label">收益</span>
+			</a>
+			<a id="myhome" class="mui-tab-item" href="myhome.html">
+				<span class="mui-icon iconfont iconwode" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			mui('nav').on('tap','a',function(){document.location.href=this.href;});
+			
+			
+			var shouyixiangqing = document.getElementById("shouyixiangqing");
+			shouyixiangqing.onclick = function(){
+				mui.openWindow({  
+    				url: "incomXiangqing.html",
+				})
+			}
+		</script>
+	</body>
+
+</html>

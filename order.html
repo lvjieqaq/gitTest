@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>加入订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/qudao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tanchuang.css"/>
+		<style type="text/css">
+			.dapei .dapeianniu ul .activedapei{
+				color: #ffd427;
+				border-bottom: 2px solid #ffd427;
+			}
+			
+			.activehuangse{
+				background-color: #fddd56;
+				border: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav orderheader">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">渠道</h1>
+		</header>
+		
+		<div class="mui-content">
+			<!--产品主图-->
+		    <div class="zhutu">
+		    	<img src="img/productzhutu.jpg" />
+		    </div>
+		    <!--款号、价格-->
+		    <div class="kuanhaomoney">
+		    	<p class="kuanhao">款号：SQ19224</p>
+		    	<p class="shuxing" id="banqun">半裙</p>
+		    	<p class="shuxing">属性</p>
+		    	<ul class="shuxingbiaoqian">
+		    		<li>1A</li>
+		    		<li>女</li>
+		    		<li>春秋</li>
+		    		<li>2019</li>
+		    		<li>931</li>
+		    		<li>春上装</li>
+		    	</ul>
+		    	<span class="productMoney">￥88.88</span>
+		    </div>
+		    <!--订货数量-->
+		    <div class="dinghuoshuliang">
+		    	<p>订货数量</p>
+			    <div class="dinghuoxiangqing">
+			    	<ul class="xiangqingchima">
+			    		<li>尺码</li>
+			    		<li>XS</li>
+			    		<li>S</li>
+			    		<li>M</li>
+			    		<li>L</li>
+			    		<li>XL</li>
+			    		<li>XXL</li>
+			    		<li>小计</li>
+			    	</ul>
+			    	<ul class="xiangqingbottom">
+			    		<li>白色</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    	</ul>
+			    	<ul class="xiangqingbottom">
+			    		<li>黑色</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    	</ul>
+			    	<ul class="xiangqingbottom">
+			    		<li>红色</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    	</ul>
+			    	<ul class="xiangqingbottom">
+			    		<li>合计</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    		<li>0</li>
+			    	</ul>
+			    </div>
+		    </div>
+		    
+		    <div class="dapei">
+		    	<!--单款搭配  其他搭配-->
+		    	<div class="dapeianniu">
+		    		<ul>
+		    			<li class="activedapei">单款搭配</li>
+		    			<li>其他搭配</li>
+		    		</ul>
+		    	</div>
+		    	<!--商品图片-->
+			    <div class="shangpintupian">
+			    	<img src="img/yifu1.jpg"/>
+			    	<div class="hengpai">
+				    	<img src="img/yifu2.jpg" />
+			    		<img src="img/yifu3.jpg" />
+			    	</div>
+			    	<img class="tupianbottom" src="img/yifu4.jpg"/>
+			    </div>
+		    </div>
+		    <div class="jiarudingdan">
+		    	<div class="dingliang" onclick="popBox()">
+		    		<span>订量：<span class="chengse">6件</span></span><br />
+		    		<span>订额：<span class="chengse">￥18523.00</span></span>
+		    	</div>
+		    	<div class="quzhifu">
+		    		<button type="button">去支付</button>
+		    	</div>
+		    	<div class="jiaru">
+		    		<button type="button" id="jiarudingdana">加入订单</button>
+		    	</div>
+		    </div>
+		    
+		    <!--弹窗-->
+		    <div id="popLayer" onclick="closeBox()"></div>
+			<div id="popBox">
+				<div class="tanchuangtop">
+					<img src="img/duanxiu.jpg"/>
+					<span class="kuanhaoa">款号：SQ19041</span>
+					<span class="yuanpaihaoa">圆牌号：041</span>
+					<span class="waitaoa">外套</span>
+					<span class="jineb">￥88.88</span>
+					<span class="mui-icon mui-icon-closeempty close" onclick="closeBox()"></span>
+				</div>
+				<!--颜色-->
+				<div class="yanse">
+					<p>颜色：</p>
+					<button class="activehuangse">白色</button>
+					<button>黑色</button>
+					<button>红色</button>
+				</div>
+				<!--尺码-->
+				<div class="chima1">
+					<p>尺码：</p>
+				</div>
+				<!--尺码内容-->
+				<div class="shoushu">
+					<span>手数</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+				<div class="shoushu xs">
+					<span>XS</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+				<div class="shoushu s">
+					<span>S</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+				<div class="shoushu m">
+					<span>M</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+				<div class="shoushu l">
+					<span>L</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+				<div class="shoushu xl">
+					<span>XL</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+				<div class="shoushu xxl">
+					<span>XXL</span>
+					<button class="jia">+</button><input type="text" /><button class="jian">-</button>
+				</div>
+			</div>
+
+		    
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			/*点击弹出按钮*/
+		    function popBox() {
+		        $("#popBox").css("display","block");
+		        $("#popLayer").css("display","block");
+		    };
+		    /*点击关闭按钮*/
+		    function closeBox() {
+		        $("#popBox").css("display","none");
+		        $("#popLayer").css("display","none");
+		    }
+		    
+		    var jiarudingdana = document.getElementById("jiarudingdana");
+			jiarudingdana.onclick = function(){
+				mui.openWindow({  
+    				url: "wodedingdan.html",
+				})
+			}
+		    
+		</script> 
+	</body>
+
+</html>

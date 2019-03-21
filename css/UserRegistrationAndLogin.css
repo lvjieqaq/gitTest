@@ -1,0 +1,251 @@
+*{margin:0;padding:0;} 
+
+body{ margin: 0;padding: 0;overflow: hidden;}
+
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;}
+
+*{text-decoration: none;list-style: none;}
+
+img{border: 0px;}
+
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 12px;padding: 0;margin: 0;}
+
+a,input,button{ outline:none; }
+
+.lf   {float:left;}
+.rt  {float:right;}
+.clear  {clear:both;}
+
+
+/*背景图top部分*/
+.beijing-top{
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 5.4rem;
+	background-image: url(../img/beijing-top.jpg);
+	background-size: 100% 100%;
+}
+/*
+ * 兼容iphone5
+ * 
+ */
+@media only screen and (max-width: 360px){
+  	.user-xieyi{
+		margin-top: 0.18rem;
+		}
+		#get-yanzhengma{
+			color: #333333;
+			position: absolute;
+			font-size: 0.28rem;
+			top: 0.04rem;
+			right: 0.04rem;
+			font-weight: 900;
+			letter-spacing: 1px;
+		}
+		.forget-passwd{
+			margin-right: 0.1rem;
+		}
+}
+@media only screen and (min-width: 375px){
+  	.user-xieyi{
+		margin-top: 0.36rem;
+		}
+		#get-yanzhengma{
+			color: #333333;
+			position: absolute;
+			font-size: 0.3rem;
+			right: 0.14rem;
+			font-weight: 900;
+			letter-spacing: 1px;
+		}
+		.forget-passwd{
+			margin-right: 0.1rem;
+		}
+}
+@media only screen and (min-width: 750px){
+	#get-yanzhengma{
+		right: 1rem;
+	}
+	.forget-passwd{
+			margin-right: 0.8rem;
+		}
+}
+
+/*主体部分*/
+.content{
+	background-color: #f7f7f7;
+}
+#content-form{
+	position: absolute;
+	width: 7.02rem;
+	height: 6.95rem;	
+	top: 4.38rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	z-index: 20;
+	background-color: #ffffff;
+	border-radius: 7px;
+}
+.user-registration{
+	position: absolute;
+	top: 1.19rem;
+	width: 5.4rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+/*表单输入框*/
+.mui-input-row{
+	width: 5.4rem;
+	height: auto;
+}
+/*
+ * 
+ * 图标
+ * 
+ */
+/*user*/
+.usertubiao{
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: white url(../img/zhuceicon.png) no-repeat;
+	background-position: -55px -15px;
+	background-size: 135px 50px;
+	vertical-align: middle;
+}
+/*验证码*/
+.yanzhengmatubiao{
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: white url(../img/zhuceicon.png) no-repeat;
+	background-position: -13px -15px;
+	background-size: 135px 50px;
+	vertical-align: middle;
+}
+/*密码*/
+.passwdtubiao{
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: white url(../img/zhuceicon.png) no-repeat;
+	background-position: -99px -15px;
+	background-size: 135px 50px;
+	vertical-align: middle;
+}
+/*
+ * 文本框
+ * 
+ */
+.mui-input-row .shurukuang{
+	/*display: inline-block;*/
+	width: 4.5rem;
+	border-top:none;
+	border-right: none;
+	border-left: none;
+	border-radius: inherit;
+	padding: 0 0 4px 5px;
+	margin-left: 0.2rem;
+	height: 0.6rem;
+}
+::-webkit-input-placeholder{
+    font-size: 0.3rem;
+    color: #cccccc;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+/*验证码输入框*/
+/*#get-yanzhengma{
+	color: #333333;
+	position: absolute;
+	font-size: 15px;
+	right: 0.05rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+}*/
+/*注册按钮*/
+.zhuce{
+	margin-top: 0.3rem;
+}
+.zhuce .mui-btn-block{
+	border-radius: 50px;
+	height: 0.9rem;
+	margin-bottom: 0;
+	padding: 0;
+	border: none;
+	color: #333333;
+	background-color: #fddc54;
+	font-weight: 900;
+}
+/*用户协议*/
+.user-xieyi{
+	text-align: center;	
+	/*margin-top: 0.36rem;*/
+}
+.user-xieyi .user-xieyicon{
+	display: inline-block;
+	width: 0.26rem;
+	height: 0.26rem;
+	border-radius: 4px;
+	border: 1px solid #fcdc53;
+	/*background: white url(../img/user-xieyi.png) no-repeat;*/
+	/*background-position: -30 -30px;*/
+	/*background-size: 56px 33px;*/
+	vertical-align: middle;
+}
+.user-xieyi .xieyi{
+	font-weight: 800;
+	font-size: 0.24rem;
+	color: #999999;
+}
+/*登录按钮*/
+#login-button{
+	width: 100%;
+	height: 1.6rem;
+	text-align: center;
+	position: absolute;
+	margin-top: 6.94rem;
+}
+#login-button p{
+	font-size: 0.32rem;
+	font-weight: 800;
+	color: #333333;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/*
+ * 
+ * 登录
+ * 
+ */
+
+/*主体部分*/
+#content-form-login{
+	position: absolute;
+	width: 7rem;
+	height: 6.05rem;	
+	top: 4.38rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	z-index: 20;
+	background-color: #ffffff;
+	border-radius: 7px;
+}
+/*忘记密码*/
+.forget-passwd{
+	float: right;
+	font-weight: 700;
+	color: #999999;
+	font-size: 0.28rem;
+}

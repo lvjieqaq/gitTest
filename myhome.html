@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myhome.css"/>
+		<style type="text/css">
+			.mui-bar-tab .mui-tab-item.mui-active {
+		    	color: #ffcd00;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header id="gerenxinxibg">
+			<h1 class="mui-title">个人中心</h1>
+			<div id="biaoqian">
+				<!--设置-->
+				<span id="shezhiicon" class="mui-icon mui-icon-gear diyige"></span>
+				<!--服务-->
+				<span id="kefu" class="mui-icon iconfont iconfuwuerji dierge"></span>
+				<!--消息-->
+				<span id="xiaoxi" class="mui-icon iconfont icontongzhi1" style="font-size: 27px;"><span class="mui-badge">3</span></span>
+			</div>
+			<img src="img/touxianga.png" />
+			<div class="jianjiea">
+				<span>梦醒时分</span><br />
+				<span>时间是一切财富中最宝贵的财富！</span>
+			</div>
+		</header>
+		<div class="mui-content">
+			<!--列表-->
+		    <ul class="mui-table-view">
+	            <li class="mui-table-view-cell" id="qudao">
+	                <a class="mui-navigate-right">
+	                	<span style="font-size: 20px;" class="mui-icon iconfont iconmingpian  tubiao1"></span>
+                    	<span class="huise">渠道</span>
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                	<span style="font-size: 15px;" class="mui-icon iconfont iconfuzhi1 tubiao1"></span>
+	                    <span class="huise">常见问题</span>
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                	<span class="mui-icon iconfont icongantanhao tubiao1"></span>
+	                    <span class="huise">意见反馈</span>
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell" id="shezhi">
+	                <a class="mui-navigate-right">
+	                	<span class="mui-icon mui-icon-gear tubiao1" style="font-size: 19px;"></span>
+	                    <span class="huise">设置</span>
+	                </a>
+	            </li>
+	        </ul>
+	        <!--退出登录按钮-->
+	        <div class="tuichu">
+	        	<button>退出登录</button>
+	        </div>
+	        
+	        <div style="width: 100%;height: 1rem;"></div>
+		</div>
+		
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab" style="box-shadow: none;background-color: white;">
+			<a id="index" class="mui-tab-item" href="index.html">
+				<span class="mui-icon iconfont iconshouye" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="task" class="mui-tab-item" href="task.html">
+				<span class="mui-icon iconfont iconrenwu" style="font-size: 19px;"><span class="mui-badge">2</span></span>
+				<span class="mui-tab-label">任务</span>
+			</a>
+			<a id="incom" class="mui-tab-item" href="incom.html">
+				<span class="mui-icon iconfont iconshouyi"></span>
+				<span class="mui-tab-label">收益</span>
+			</a>
+			<a id="myhome" class="mui-tab-item mui-active" href="myhome.html">
+				<span class="mui-icon iconfont iconwode" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		
+		<script type="text/javascript" src="js/rem.js" ></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			mui('nav').on('tap','a',function(){document.location.href=this.href;});
+			
+			
+//			渠道
+			var qudao = document.getElementById("qudao");
+			qudao.onclick = function(){
+				mui.openWindow({  
+    				url: "ChannelList.html",
+				})
+			}
+//			设置
+			var shezhi = document.getElementById("shezhi");
+			shezhi.onclick = function(){
+				mui.openWindow({  
+    				url: "shezhi.html",
+				})
+			}
+			var shezhiicon = document.getElementById("shezhiicon");
+			shezhiicon.onclick = function(){
+				mui.openWindow({  
+    				url: "shezhi.html",
+				})
+			}
+//			消息
+			var xiaoxi = document.getElementById("xiaoxi");
+			xiaoxi.onclick = function(){
+				mui.openWindow({  
+    				url: "xiaoxizhongxin.html",
+				})
+			}
+//			客服中心
+			var kefu = document.getElementById("kefu");
+			kefu.onclick = function(){
+				mui.openWindow({  
+    				url: "kefuzhongxin.html",
+				})
+			}
+		</script>
+	</body>
+
+</html>

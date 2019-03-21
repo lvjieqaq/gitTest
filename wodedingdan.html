@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/wodedingdan.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			/*订单属性样式切换*/
+			.activedingdan{
+				color: #fb9200;
+			}
+			.activedingdan:after{
+				content: '';
+				position: absolute;
+				margin: auto;
+				left: 0;
+			    right: 0;
+				bottom: 0;
+			    height: 2px;
+			    width: 0.6rem;
+			    background-color: #fb9200;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav dingdanxiakuang">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left dingdanfanhui"></a>
+		    <h1 class="mui-title">我的订单</h1>
+		</header>
+		
+		<div class="mui-content">
+		    <div class="dingdanshuxing">
+		    	<ul id="content">
+		    		<li @click="active=0" :class="{'activedingdan':active===0}">全 部</li>
+		    		<li @click="active=1" :class="{'activedingdan':active===1}">待付款</li>
+		    		<li @click="active=2" :class="{'activedingdan':active===2}">待收货</li>
+		    		<li @click="active=3" :class="{'activedingdan':active===3}">待评价</li>
+		    	</ul>
+		    </div>
+		    <!--购物车单个商品-->
+		    <div class="gouwucheproduct" style="margin-top: 1.14rem;">
+		    	<!--款数、款色。。-->
+			    <div class="kuanshu">
+			    	<p class="waibu">SQ19041款数：<span class="huangse">6</span>件 款色：<span class="huangse">2</span> 下单门店数：<span class="huangse">2</span> 下单单件数：<span class="huangse">10</span></p>
+			    </div>
+			    <!--商品信息-->
+			    <div class="shangpinxinxitop">
+		    	    <input name="radio" type="radio" onclick="setSelectUserNo(this);">
+		    	    <img src="img/duanxiu.jpg" />
+		    	    <div class="kuanhao">
+		    	    	<span>款号：SQ19041</span><br />
+		    	    	<span>圆牌号：041</span><br />
+		    	    	<span>外套</span>
+		    	    </div>
+		    	    <div class="chanpinjiage">
+		    	    	<span>￥88.88</span><br />
+		    	    	<span class="ersan">10件</span><br />
+		    	    	<span class="ersan">￥880.88</span>
+		    	    </div>
+			    </div>
+			    <!--尺码-->
+			    <div class="chima">
+			    	<ul>
+			    		<li>XS</li>
+			    		<li>S</li>
+			    		<li>M</li>
+			    		<li>L</li>
+			    		<li>XL</li>
+			    		<li>XXL</li>
+			    		<li>小计</li>
+			    	</ul>
+			    </div>
+			    <div class="chimabottom">
+			    	<ul>
+			    		<li style="width: 1.4rem;">白色</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.54rem;">0</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.76rem;">0</li>
+			    		<li style="width: 0.9rem;">0</li>
+			    		<li>0</li>
+			    	</ul>
+			    </div>
+			    <!--修改-->
+			    <div class="xiugaikuang">
+			    	<button type="button" class="xiugai">修改</button>
+			    </div>
+		    </div>
+		    
+		    <!--购物车单个商品-->
+		    <div class="gouwucheproduct">
+		    	<!--款数、款色。。-->
+			    <div class="kuanshu">
+			    	<p class="waibu">SQ19041款数：<span class="huangse">6</span>件 款色：<span class="huangse">2</span> 下单门店数：<span class="huangse">2</span> 下单单件数：<span class="huangse">10</span></p>
+			    </div>
+			    <!--商品信息-->
+			    <div class="shangpinxinxitop">
+		    	    <input name="radio" type="radio" onclick="setSelectUserNo(this);">
+		    	    <img src="img/duanxiu.jpg" />
+		    	    <div class="kuanhao">
+		    	    	<span>款号：SQ19041</span><br />
+		    	    	<span>圆牌号：041</span><br />
+		    	    	<span>外套</span>
+		    	    </div>
+		    	    <div class="chanpinjiage">
+		    	    	<span>￥88.88</span><br />
+		    	    	<span class="ersan">10件</span><br />
+		    	    	<span class="ersan">￥880.88</span>
+		    	    </div>
+			    </div>
+			    <!--尺码-->
+			    <div class="chima">
+			    	<ul>
+			    		<li>XS</li>
+			    		<li>S</li>
+			    		<li>M</li>
+			    		<li>L</li>
+			    		<li>XL</li>
+			    		<li>XXL</li>
+			    		<li>小计</li>
+			    	</ul>
+			    </div>
+			    <div class="chimabottom">
+			    	<ul>
+			    		<li style="width: 1.4rem;">白色</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.54rem;">0</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.76rem;">0</li>
+			    		<li style="width: 0.9rem;">0</li>
+			    		<li>0</li>
+			    	</ul>
+			    </div>
+			    <!--修改-->
+			    <div class="xiugaikuang">
+			    	<button type="button" class="xiugai">修改</button>
+			    </div>
+		    </div>
+		    
+		    <div class="gouwucheproduct">
+		    	<!--款数、款色。。-->
+			    <div class="kuanshu">
+			    	<p class="waibu">SQ19041款数：<span class="huangse">6</span>件 款色：<span class="huangse">2</span> 下单门店数：<span class="huangse">2</span> 下单单件数：<span class="huangse">10</span></p>
+			    </div>
+			    <!--商品信息-->
+			    <div class="shangpinxinxitop">
+		    	    <input name="radio" type="radio" onclick="setSelectUserNo(this);">
+		    	    <img src="img/duanxiu.jpg" />
+		    	    <div class="kuanhao">
+		    	    	<span>款号：SQ19041</span><br />
+		    	    	<span>圆牌号：041</span><br />
+		    	    	<span>外套</span>
+		    	    </div>
+		    	    <div class="chanpinjiage">
+		    	    	<span>￥88.88</span><br />
+		    	    	<span class="ersan">10件</span><br />
+		    	    	<span class="ersan">￥880.88</span>
+		    	    </div>
+			    </div>
+			    <!--尺码-->
+			    <div class="chima">
+			    	<ul>
+			    		<li>XS</li>
+			    		<li>S</li>
+			    		<li>M</li>
+			    		<li>L</li>
+			    		<li>XL</li>
+			    		<li>XXL</li>
+			    		<li>小计</li>
+			    	</ul>
+			    </div>
+			    <div class="chimabottom">
+			    	<ul>
+			    		<li style="width: 1.4rem;">白色</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.54rem;">0</li>
+			    		<li style="width: 0.6rem;">0</li>
+			    		<li style="width: 0.76rem;">0</li>
+			    		<li style="width: 0.9rem;">0</li>
+			    		<li>0</li>
+			    	</ul>
+			    </div>
+			    <!--修改-->
+			    <div class="xiugaikuang">
+			    	<button type="button" class="xiugai">修改</button>
+			    </div>
+		    </div>
+		    
+		    <div style="width: 100%; height: 80px;"></div>
+		    <!--底部banner结算-->
+		    <div class="jiesuan">
+		    	<div class="dingliang">
+		    		<input name="radio" type="radio" onclick="setSelectUserNo(this);">
+		    		<span>全选</span>
+		    	</div>
+		    	<div class="quzhifu">
+		    		<div>合计：<span class="chengse">￥500</span></div>
+		    	</div>
+		    	<div class="jiaru">
+		    		<button type="button" id="jiesuan">结算（1）</button>
+		    	</div>
+		    </div>
+		</div>
+		
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			function setSelectUserNo(radioObj){
+				var radioCheck= $(radioObj).val();
+				if("1"==radioCheck){
+					$(radioObj).attr("checked",false);
+					$(radioObj).val("0");
+					
+				}else{ 
+					$(radioObj).val("1");
+					
+				}
+			}
+			
+			var jiesuan = document.getElementById("jiesuan");
+			jiesuan.onclick = function(){
+				mui.openWindow({  
+    				url: "querendingdan.html",
+				})
+			}
+			
+			var vm = new Vue({
+		        el: '#content',
+		        data: {
+		            "active": 0
+		        },
+		    })
+			
+		</script>
+	</body>
+
+</html>

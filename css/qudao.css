@@ -1,0 +1,461 @@
+*{margin:0;padding:0;} 
+body{ margin: 0;padding: 0;overflow: hidden;}
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;}
+*{text-decoration: none;list-style: none;}
+img{border: 0px;}
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 12px;padding: 0;margin: 0;}
+a,input,button{ outline:none; }
+::-moz-focus-inner{border:0px;}
+/*myhome渠道*/
+.mui-bar{
+	box-shadow: none;
+}
+.mui-bar a{
+	color: #413d35;
+}
+#bgimg{
+	width: 100%;
+	height: 2.7rem;
+	background: url(../img/qudaomingdan.jpg);
+	background-size: 100% 100%;
+}
+#mingdanli{
+	width: 100%;
+	height: 0.88rem;
+}
+#mingdanli ul{
+	width: 100%;
+	height: 0.88rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-bottom: 1px solid #e4e4e4;
+}
+#mingdanli ul li{
+	font-size: 0.32rem;
+	color: #666666;
+}
+#mingdan .mingdanjuti{
+	width: 100%;
+	height: 0.76rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-bottom: 1px solid #e4e4e4;
+}
+#mingdan li{
+	color: #333333;
+	font-size: 0.32rem;
+}
+#mingdan .mingdanjuti1{
+	width: 90%;
+	height: 0.76rem;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#mingdan .mingdanjuti1 .xuhao{
+	margin-left: 0.06rem;
+}
+#mingdan .mingdanjuti1 .jingli{
+	margin-left: 0.6rem;
+}
+#mingdan .mingdanjuti1 .qudao{
+	margin-right: -4px;
+}
+
+
+
+/*渠道注册*/
+.qudaozhucebg{
+	position: relative;
+	width: 6.86rem;
+	height: 7.34rem;
+	margin: auto;
+	margin-top: 0.6rem;
+	background-image: url(../img/qudaozhucebg.png);
+	background-size: 100% 100%;
+}
+.qudaozhucebg .zcjl{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 5.54rem;
+	height: 1.6rem;
+	margin: auto;
+	margin-top: 0.85rem;
+	background-image: url(../img/zhucejinglia.png);
+	background-size: 100% 100%;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.qudaozhucebg .zcdl{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 5.54rem;
+	height: 1.6rem;
+	margin: auto;
+	margin-top: 2.73rem;
+	background-image: url(../img/zhucedailia.png);
+	background-size: 100% 100%;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.qudaozhucebg button{
+	margin-right: 0.6rem;
+	color: #FFFFFF;
+	background-color: #fb9200;
+	border-radius: 30px;
+	border: none;
+	box-shadow: 0 5px 10px #eedcb3;
+}
+
+/*
+ * 
+ * 
+ * 注册代理
+ * 
+ * 
+ * */
+.dailibiaodan .mui-input-group{
+	margin-top: 0.14rem;
+	border-top: none;
+	background-color: #efeff4;
+}
+.dailibiaodan .mui-input-group:before{
+	height: 0;
+}
+.dailibiaodan .mui-input-group:after{
+	height: 0;
+}
+.dailibiaodan .mui-input-group .mui-input-row{
+	height: 1.2rem;
+}
+.dailibiaodan .mui-input-row label{
+	height: 1.2rem;
+	line-height: 1.2rem;
+	padding: 0 0.4rem;
+}
+.dailibiaodan .mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+	height: 1.2rem;
+	line-height: 1.2rem;
+}
+.dailibiaodan .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech{
+	top: 0.4rem;
+}
+.dailibiaodan .mui-input-group .mui-input-row:after{
+	background-color: #f2f2f2;
+}
+.dailibiaodan input, select, textarea{
+	font-size: 0.3rem;
+}
+.dailibiaodan #suozaidizhi{
+	height: 1.8rem;
+}
+.dailibiaodan .suozaidiyou{
+	margin-left: 2.6rem;
+}
+.dailibiaodan select{
+	width: 1.42rem;
+	height: 0.48rem;
+	border: 1px solid #e5e2e2 !important;
+	font-size: 0.28rem;
+	-webkit-appearance: menulist;
+	color: #999999;
+	margin-top: 0.32rem;
+}
+.dailibiaodan #dizhiinput{
+	padding: 0 0 0 0.2rem;
+	height: 0.8rem;
+	margin-top: -0.2rem;
+}
+.dailibiaodan #suozaidi option{
+	
+}
+.dailibiaodan #nan{
+	position: absolute;
+	margin-left: 2.6rem;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.dailibiaodan #nv{
+	width: 1.2rem;
+	height: 1.2rem;
+	position: absolute;
+	margin-left: 4rem;
+}
+.dailibiaodan #nan label{
+	position: absolute;
+	margin-left: 0.2rem;
+	
+}
+.dailibiaodan #nan input{
+	margin-left: -0.4rem;
+	width: 0.1rem;
+	height: 5px;
+	position: absolute;
+	top: 0;
+}
+.dailibiaodan #nv label{
+	position: absolute;
+	margin-left: 0.2rem;
+	
+}
+.dailibiaodan #nv input{
+	position: absolute;
+	margin-left: -0.4rem;
+	top: 0;
+}
+.dailibiaodan .mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	font-size: 0.32rem;
+}
+.dailibiaodan .mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before{
+	color: #ffdb46;
+}
+.dailibiaodan #huoquyzm{
+	position: absolute;
+	right: 0.4rem;
+	top: 0.3rem;
+	width: 1.6rem;
+	height: 0.6rem;
+	padding: 0.04rem 0.1rem 0.04rem 0.1rem;
+	font-size: 0.24rem;
+	color: #ffdb46;
+	border: 1px solid #ffdb46;
+}
+.dailibiaodan #shoujihao .mui-input-clear~.mui-icon-clear, .mui-input-password~.mui-icon-eye, .mui-input-speech~.mui-icon-speech{
+	right: 1.9rem;
+}
+
+/*友麦细则*/
+#youmaixize{
+	width: 90%;
+	margin: auto;
+	height: 0.8rem;
+	margin-top: 0.4rem;
+}
+.user-xieyicon {
+    display: inline-block;
+    width: 0.26rem;
+    height: 0.26rem;
+    border-radius: 4px;
+    border: 1px solid #fcdc53;
+    background: white url(../img/youmaixize.png) no-repeat; 
+    background-size: 100% 100%; 
+    vertical-align: middle;
+}
+#youmaixize .xieyi {
+    font-weight: 800;
+    font-size: 0.24rem;
+    color: #999999;
+}
+
+/*立即注册*/
+#lijizhuce{
+	margin-top: 0.4rem;
+	width: 90%;
+	margin: auto;
+}
+#lijizhuce button{
+	height: 0.8rem;
+	border-radius: 50px;
+	padding: 0;
+	background-color: #fedb4e;
+	border: none;
+	color: #333333;
+}
+
+/*
+ * 
+ * 订单页面
+ * 
+ * 
+ * */
+
+.orderheader{
+	box-shadow: none;
+	background-color: #FFFFFF;
+}
+.zhutu{
+	width: 100%;
+	height: 6.26rem;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #e4e4e4;
+}
+.zhutu img{
+	width: 100%;
+	height: 100%;
+}
+.kuanhaomoney{
+	width: 6.9rem;
+	height: 2.8rem;
+	max-height: 3.5rem;
+	border: 1px solid #f2f2f2;
+	background-color: #FFFFFF;
+	position: absolute;
+	/*z-index: 100;*/
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: -0.4rem;
+}
+.kuanhaomoney .kuanhao{
+	font-family: "黑体";
+	font-weight: 700;
+	margin: 0.4rem 0 0 0.4rem;
+	font-size: 0.36rem;
+	color: #333333;
+}
+.kuanhaomoney #banqun{
+	margin-top: 0.1rem;
+}
+.kuanhaomoney .shuxing{
+	margin: 0 0 0 0.44rem;
+	font-size: 0.32rem;
+}
+.kuanhaomoney .shuxingbiaoqian{
+	margin: 0.16rem 0 0 0.3rem;
+}
+.kuanhaomoney .shuxingbiaoqian li{
+	display: inline-block;
+	background-color: #f1f1f1;
+	margin-left: 0.1rem;
+	padding: 0.04rem 0.1rem 0.04rem 0.1rem;
+	font-size: 0.3rem;
+}
+.kuanhaomoney .productMoney{
+	color: #fb9200;
+	font-size: 0.4rem;
+	position: absolute;
+	right: 0.4rem;
+	top: 0.4rem;
+}
+/*订货数量*/
+.dinghuoshuliang{
+	width: 100%;
+	height: 6.32rem;
+	background-color: #FFFFFF;
+	text-align: center;
+	padding-top: 2.66rem;
+}
+.dinghuoshuliang p{
+	margin: auto;
+	background-color: #f1f1f1;
+	width: 3rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	color: #333333;
+	font-size: 0.32rem;
+}
+.dinghuoxiangqing{
+	width: 90%;
+	height: 2.8rem;
+	margin: auto;
+	margin-top: 0.3rem;
+}
+.dinghuoxiangqing .xiangqingchima li{
+	float: left;
+	width: 0.82rem;
+	font-size: 0.32rem;
+}
+.dinghuoxiangqing .xiangqingbottom li{
+	font-size: 0.32rem;
+	width: 0.82rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+
+.dapei{
+	margin-top: 0.22rem;
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+.dapei .dapeianniu{
+	width: 100%;
+	height: 0.9rem;
+}
+.dapei .dapeianniu ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.dapei .dapeianniu ul li{
+	line-height: 0.9rem;
+	font-size: 0.34rem;
+	color: #666666;
+	padding: 0 0 0 1.2rem;
+	width: 50%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+/*商品图片*/
+.shangpintupian{
+	margin-top: 0.34rem;
+}
+.shangpintupian img{
+	width: 100%;
+}
+.shangpintupian .hengpai{
+	width: 100%;
+	height: 5.6rem;
+	margin-top: 0.07rem;
+}
+.shangpintupian .hengpai img:first-child{
+	float: left;
+	width: 3.72rem;
+	height: 5.6rem;
+}
+.shangpintupian .hengpai img:last-child{
+	float: right;
+	width: 3.72rem;
+	height: 5.6rem;
+}
+.shangpintupian .tupianbottom{
+	margin-top: 0.15rem;
+}
+
+/*加入订单*/
+.jiarudingdan{
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	width: 100%;
+	height: 1.12rem;
+	border-top: 1px solid #e8e8e8;
+	z-index: 1000;
+}
+.jiarudingdan .dingliang,.quzhifu,.jiaru{
+	float: left;
+	width: 2.5rem;
+	height: 100%;
+}
+.jiarudingdan .dingliang span{
+	font-size: 0.26rem;
+}
+.jiarudingdan .dingliang .chengse{
+	color: #fb9200;
+}
+.jiarudingdan .dingliang{
+	padding: 0.08rem 0 0.06rem 0.2rem;
+	border-right: 1px solid #e8e8e8;
+}
+.jiarudingdan button{
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 0.32rem;
+}
+.jiarudingdan .jiaru button{
+	background-color: #fddd56;
+	border-radius: 0;
+}

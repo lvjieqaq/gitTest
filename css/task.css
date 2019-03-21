@@ -1,0 +1,301 @@
+*{margin:0;padding:0;} 
+
+body{ margin: 0;padding: 0;overflow: hidden;}
+
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;;}
+
+*{text-decoration: none;list-style: none;}
+
+img{border: 0px;}
+
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 12px;padding: 0;margin: 0;}
+
+a,input,button{ outline:none; }
+
+.lf   {float:left;}
+.rt  {float:right;}
+.clear  {clear:both;}
+
+/*header部分*/
+.tasktop{
+	border-bottom: 1px solid #e4e4e4;
+	box-shadow: none;
+	background-color: #f7f7f7;
+}
+.tasktop ul{
+	position: absolute;
+	top: 0.16rem;
+	left: 2.6rem;
+}
+.tasktop ul li{
+	float: left;
+	font-size: 0.32rem;
+	width: 0.68rem;
+	height: 0.68rem;
+	margin-left: 0.4rem;
+	padding: 0.1rem 0 0.1rem 0;
+}
+
+/*任务详情 产品图片+信息*/
+.renwuchanpinxinxi{
+	position: relative;
+	width: 100%;
+	height: 7.08rem;
+	background-color: white;
+}
+.renwuchanpinxinxi img{
+	width: 4.8rem;
+	height: 4.74rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0.7rem;
+}
+.renwuchanpinxinxi .xinxi{
+	position: absolute;
+	width: 100%;
+	height: 1.5rem;
+	bottom: 0;
+}
+.renwuchanpinxinxi .xinxi .biaoti{
+	position: absolute;
+	letter-spacing: 1px;
+	font-size: 0.32rem;
+	left: 0.2rem;
+	top: 0.1rem;
+	
+}
+.renwuchanpinxinxi .xinxi .lingshoujia{
+	position: absolute;
+	font-size: 0.24rem;
+	left: 0.22rem;
+	top: 0.54rem;
+	color: #666666;
+}
+.renwuchanpinxinxi .xinxi .kuaidi{
+	position: absolute;
+	font-size: 0.24rem;
+	left: 0.22rem;
+	top: 0.94rem;
+	color: #666666;
+}
+.renwuchanpinxinxi .xinxi .fahuodizhi{
+	position: absolute;
+	font-size: 0.24rem;
+	left: 1.9rem;
+	top: 0.94rem;
+	color: #666666;
+}
+.renwuchanpinxinxi .xinxi .pifajia{
+	position: absolute;
+	font-size: 0.26rem;
+	left: 3.5rem;
+	top: 0.54rem;
+	color: #fb9200;
+}
+.renwuchanpinxinxi .xinxi .kuaidifei{
+	position: absolute;
+	font-size: 0.24rem;
+	left: 4rem;
+	top: 0.94rem;
+	color: #666666;
+}
+.renwuchanpinxinxi .xinxi .fenxiang{
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	padding-top: 0.5rem;
+	font-size: 0.28rem;
+	right: 0.2rem;
+	top: 0.26rem;
+	color: #999999;
+	background-origin: padding-box;
+	background-position: top center;
+	background: url(../img/fenxiang.png);
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+}
+
+.xinxicontent span{
+	color: #666666;
+}
+.xinxicontent .xiangxi{
+	float: right;
+	font-size: 0.26rem;
+}
+.xinxicontent .zizhi{
+	line-height: 0.55rem;
+}
+.xinxicontent .zuo, .zizhi{
+	font-size: 0.3rem;
+}
+.xinxicontent button{
+	height: 0.6rem;
+	width: 1.4rem;
+	border-radius: 30px;
+	color: white;
+	background-color: #fb9200;
+	border: none;
+}
+.mui-table-view:after{
+	height: 0;
+}
+.mui-table-view-cell:after{
+	background-color: #EEEEEE;
+}
+.mui-table-view:before{
+	height: 0;
+}
+.xinxicontent1{
+	margin-top: 0.24rem;
+}
+.xinxicontent1 span{
+	color: #666666;
+}
+.xinxicontent1 .xiangxi{
+	float: right;
+	font-size: 0.26rem;
+}
+.xinxicontent1 .zizhi{
+	line-height: 0.55rem;
+}
+.xinxicontent1 .zuo, .zizhi{
+	font-size: 0.3rem;
+}
+.xinxicontent2 .zuo{
+	font-size: 0.3rem;
+	color: #666666;
+}
+
+/*底部导航条*/
+.bottombanner{
+	position: fixed;
+	width: 100%;
+	height: 1.1rem;
+	bottom: 0;
+}
+.bottombanner .kefudianhua{
+	float: left;
+	width: 50%;
+	height: 100%;
+	border-top: 1px solid #e8e8e8;
+}
+.bottombanner .phone{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+}
+.bottombanner .lingqurenwu{
+	float: right;
+	width: 50%;
+	height: 100%;
+}
+.bottombanner .lingqu{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: #fddd56;
+	border-radius: 0;
+	font-size: 0.34rem;
+	padding: 0;
+}
+.bottombanner .kefu{
+	font-size: 0.34rem;
+	color: #666666;
+}
+
+/*产品页*/
+
+.chanpinye{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0.88rem;
+}
+.chanpinye .leixingye{
+	width: 100%;
+	height: 7.5rem;
+	background-color: white;
+}
+.chanpinye .leixingbiaoti{
+	top: 0.5rem;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 6.88rem;
+}
+.chanpinye .leixingliebiao{
+	width: 6.88rem;
+	height: 5.4rem;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.chanpinye .leixingliebiao li{
+	width: 3.28rem;
+	height: 2.5rem;
+	border: 1px solid #666666;
+	position: relative;
+	text-align: center;
+	padding-top: 0.1rem;
+}
+.chanpinye .leixingliebiao li img{
+	width: 2.42rem;
+	height: 1.82rem;
+}
+.chanpinye .leixingliebiao span{
+	font-size: 0.28rem;
+	color: #333333;
+}
+
+/*产品图片*/
+
+.chanpinye .chanpin{
+	width: 100%;
+	height: 23rem;
+	background-color: white;
+	margin-top: 0.2rem;
+	position: relative;
+}
+.chanpinye .chanpinbiaoti{
+	top: 0.4rem;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 6.88rem;
+}
+.chanpinye .chanpinliebiao{
+	width: 6.88rem;
+	height: auto;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 9rem;
+}
+.chanpinye .chanpinliebiao li{
+	margin-top: 0.4rem;
+}
+.chanpinye .chanpinliebiao li img{
+	width: 6.88rem;
+	height: 4.1rem;
+	border: 1px solid #707070;
+	margin-top: 0.2rem;
+	padding: 0.06rem 0.06rem 0.06rem 0.06rem;
+}
+.chanpinye .chanpinliebiao p{
+	font-size: 0.3rem;
+	color: #333333;
+	font-weight: 700;
+}

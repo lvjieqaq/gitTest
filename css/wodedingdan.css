@@ -1,0 +1,422 @@
+*{margin:0;padding:0;} 
+
+body{ margin: 0;padding: 0;overflow: hidden;}
+
+body,html{-webkit-text-size-adjust: none;width: 100%;height: 100%;;}
+
+*{text-decoration: none;list-style: none;}
+
+img{border: 0px;}
+
+ul,li,dl,dd,dt,p,ol,h1,h2,h3,h4,h5{font-size: 12px;padding: 0;margin: 0;}
+
+a,input,button{ outline:none; }
+
+.lf   {float:left;}
+.rt  {float:right;}
+.clear  {clear:both;}
+
+
+.dingdanxiakuang{
+	box-shadow: none;
+	border-bottom: 1px solid #c2c2c2;
+	background-color: white;
+}
+.dingdanfanhui{
+	color: #2a1d00;
+}
+.dingdanshuxing{
+	position: fixed;
+	z-index: 11;
+	width: 100%;
+	height: 0.9rem;
+	background-color: white;
+}
+.dingdanshuxing ul{
+	/*position: fixed;*/
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	line-height: 0.9rem;
+}
+.dingdanshuxing li{
+	font-size: 0.32rem;
+	position: relative;
+}
+
+.kuanshu{
+	margin-top: 0.24rem;
+	width: 100%;
+	height: 0.68rem;
+	background-color: #cccccc;
+	text-align: center;
+	line-height: 0.68rem;
+}
+.waibu{
+	color: #666666;
+	font-size: 0.26rem;
+}
+.huangse{
+	color: #fb9200;
+}
+/*购物车单个商品*/
+.gouwucheproduct{
+	width: 100%;
+	height: 5.78rem;
+	background-color: white;
+}
+.shangpinxinxitop{
+	position: relative;
+	width: 100%;
+	height: 2.08rem;
+	background-color: white;
+}
+.shangpinxinxitop input{
+	width: 0.4rem;
+	height: 0.4rem;
+	position: absolute;
+	top: 0.7rem;
+	left: 0.4rem;
+}
+input[type=checkbox]:checked:before, input[type=radio]:checked:before{
+	color: #ffdb46;
+}
+/*.shangpinxinxitop input[type=checkbox]:before, input[type=radio]:before{
+	font-family: Muiicons;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    color: #ffdb46;
+    border-radius: 0;
+    background: 0 0;
+    -webkit-font-smoothing: antialiased;
+}*/
+.shangpinxinxitop input[type=checkbox], input[type=radio]{
+	
+}
+.shangpinxinxitop img{
+	width: 1.4rem;
+	height: 1.54rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 1.2rem;
+	border: 1px solid #e4e4e4;
+}
+.shangpinxinxitop .kuanhao{
+	width: 2.8rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 2.8rem;
+}
+.shangpinxinxitop .kuanhao span{
+	font-size: 0.3rem;
+	color: #666666;
+	line-height: 0.5rem;
+}
+.shangpinxinxitop .chanpinjiage{
+	width: 1.6rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 0.4rem;
+}
+.shangpinxinxitop .chanpinjiage span{
+	float: right;
+	font-size: 0.3rem;
+	line-height: 0.5rem;
+}
+.shangpinxinxitop .chanpinjiage .ersan{
+	color: #999999;
+}
+/*尺码*/
+.gouwucheproduct .chima{
+	width: 6.9rem;
+	height: 0.72rem;
+	background-color: #f7f7f7;
+	margin: auto;
+}
+.gouwucheproduct .chima ul{
+	margin-left: 1.2rem;
+}
+.gouwucheproduct .chima li{
+	display: inline-block;
+	margin-left: 0.36rem;
+	line-height: 0.72rem;
+	font-size: 0.28rem;
+}
+.gouwucheproduct .chimabottom{
+	width: 6.9rem;
+	height: 0.85rem;
+	border: 1px solid #e4e4e4;
+	margin: auto;
+	border-top: none;
+}
+.gouwucheproduct .chimabottom ul{
+	/*display: flex;*/
+	/*align-items: center;*/
+	margin: 0 0.36rem 0 0.2rem;
+	justify-content: space-around;
+}
+.gouwucheproduct .chimabottom li{
+	display: inline-block;
+	line-height: 0.85rem;
+	font-size: 0.28rem;
+}
+.gouwucheproduct .xiugaikuang{
+	position: relative;
+	width: 100%;
+	height: 1.42rem;
+}
+.gouwucheproduct .xiugai{
+	position: absolute;
+	width: 1.4rem;
+	height: 0.6rem;
+	top: 0.36rem;
+	right: 0.4rem;
+	padding: 0.1rem 0.24rem;
+	border: 1px solid #797979;
+	color: #797979;
+}
+
+/*结算*/
+.jiesuan{
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	width: 100%;
+	height: 1.12rem;
+	border-top: 1px solid #e8e8e8;
+}
+.jiesuan .dingliang,.quzhifu,.jiaru{
+	float: left;
+	width: 2.5rem;
+	height: 100%;
+}
+.jiesuan .dingliang span{
+	font-size: 0.26rem;
+}
+.jiesuan .quzhifu .chengse{
+	color: #fb9200;
+}
+.jiesuan .dingliang{
+	padding: 0.4rem 0 0 0.5rem;
+	border-right: 1px solid #e8e8e8;
+}
+.jiesuan .dingliang span{
+	position: absolute;
+	top: 0.4rem;
+	left: 1rem;
+	font-size: 0.32rem;
+}
+.jiesuan .dingliang input{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.jiesuan .quzhifu{
+	padding: 0.36rem 0 0 0.3rem;
+}
+.jiesuan .jiaru button{
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 0.32rem;
+	background-color: #fddd56;
+	border-radius: 0;
+}
+
+/*
+ * 
+ * 
+ * 确认订单页面
+ * 
+ *
+ */
+
+#querendingdantop{
+	background-color: white;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+#querendingdantop a{
+	color: #2a1d00;
+}
+.dingdanspxx{
+	width: 100%;
+	height: 2.92rem;
+	background-color: white;
+	margin-top: 0.2rem;
+}
+.dingdanspxx .spxi{
+	width: 90%;
+	height: 0.82rem;
+	margin: auto;
+	padding-top: 0.2rem;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.shangpinxinxibottom{
+	position: relative;
+	width: 100%;
+	height: 2.08rem;
+	background-color: white;
+}
+.shangpinxinxibottom img{
+	width: 1.4rem;
+	height: 1.54rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 0.4rem;
+	border: 1px solid #e4e4e4;
+}
+.shangpinxinxibottom .kuanhao{
+	width: 2.8rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 2.2rem;
+}
+.shangpinxinxibottom .kuanhao span{
+	font-size: 0.3rem;
+	color: #666666;
+	line-height: 0.5rem;
+}
+.shangpinxinxibottom .chanpinjiage{
+	width: 1.6rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 0.4rem;
+}
+.shangpinxinxibottom .chanpinjiage span:first-child{
+	color: #fb9200;
+}
+.shangpinxinxibottom .chanpinjiage span{
+	float: right;
+	font-size: 0.3rem;
+	line-height: 0.5rem;
+}
+.shangpinxinxibottom .chanpinjiage .ersan{
+	color: #999999;
+}
+/*收货地址*/
+.shouhuodizhi{
+	width: 100%;
+	height: 1.92rem;
+	background-color: white;
+	margin-top: 0.2rem;
+}
+.shouhuodizhi .shdz{
+	width: 100%;
+	height: 2.92rem;
+	background-color: white;
+	margin-top: 0.2rem;
+}
+.shouhuodizhi .shdz{
+	width: 90%;
+	height: 0.82rem;
+	margin: auto;
+	padding-top: 0.2rem;
+	border-bottom: 1px solid #ebebeb;
+}
+.shouhuodizhi .shdzbottom{
+	position: relative;
+	width: 90%;
+	margin: auto;
+	padding-top: 0.1rem;
+}
+.shouhuodizhi .shdzbottom span{
+	color: #666666;
+	font-size: 0.28rem;
+}
+.shouhuodizhi .shdzbottom .youjiantou{
+	font-size: 0.4rem;
+	position: absolute;
+	right: 0;
+	top: 0.4rem;
+}
+/*支付方式*/
+.zhifufangshi{
+	width: 100%;
+	height: 2.54rem;
+	background-color: white;
+	margin-top: 0.2rem;
+}
+.zhifufangshi .shdz{
+	width: 100%;
+	height: 2.92rem;
+	background-color: white;
+	margin-top: 0.2rem;
+}
+.zhifufangshi .shdz{
+	width: 90%;
+	height: 0.82rem;
+	margin: auto;
+	padding-top: 0.2rem;
+	border-bottom: 1px solid #ebebeb;
+}
+.zhifufangshi .weixinzhifubao .mui-table-view:after{
+	height: 0;
+}
+.zhifufangshi .weixinzhifubao a{
+	font-size: 0.3rem;
+	color: #666666;
+}
+.weixinzhifubao .zhifuanniu{
+	position: absolute;
+	right: 0.4rem;
+	top: 0.28rem;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 50%;
+	background-image: url(../img/zhifua.png);
+	background-size: 100% 100%;
+}
+
+/*底部确认支付*/
+.querenzhifu{
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	width: 100%;
+	height: 1.12rem;
+	border-top: 1px solid #e8e8e8;
+}
+.querenzhifu .heji{
+	float: left;
+	width: 5rem;
+	height: 100%;
+}
+.querenzhifu .jiesuan1{
+	float: right;
+	width: 2.5rem;
+	height: 100%;
+}
+.querenzhifu .heji .chengse{
+	color: #fb9200;
+}
+.querenzhifu .heji{
+	padding: 0.36rem 0 0 0.3rem;
+}
+.querenzhifu .jiesuan1 button{
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 0.32rem;
+	background-color: #fddd56;
+	border-radius: 0;
+}

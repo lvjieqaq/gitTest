@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<style type="text/css">
+			/*产品导航条切换样式绑定*/
+			/*#productClass .activePruduct{
+				color: #FB9200;
+			}*/
+			
+			/*.mui-bar-tab .mui-tab-item{
+	    		color: #666666;
+	    	}*/
+	    	.mui-bar-tab .mui-tab-item.mui-active {
+		    	color: #ffcd00;
+			}
+			
+			.xuanzhuan{
+				transform:rotate(180deg);
+				-webkit-transform: rotate(180deg);
+			}
+			
+			/*弹窗切换class*/
+			#panelrenwua .daohangneibu .activediqu{
+				color: #fb9200;
+			}
+		</style>
+	</head>
+		
+	<body>
+		<!--顶部导航-->
+		<header class="mui-bar mui-bar-nav">
+			<!--城市选择下拉列表-->
+			<div id="flipa" style="position: fixed;width: 70px;height: 40px;">
+				<span class="mui-btnab">李沧区</span><img class="flipa" src="img/xialajiantou.png" />
+			</div>
+			<!--搜索产品-->
+			<div class="mui-input-row mui-search">
+			    <input type="search" class="mui-input-clear" placeholder="搜索产品">
+			</div>
+			
+		</header>
+		<!--主体部分-->
+		<div class="mui-content">
+		    <!--banner轮播图-->
+		    <div id="slider" class="mui-slider">
+			  <div class="mui-slider-group mui-slider-loop">
+			    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="#">
+			        <img src="img/banner.jpg">
+			      </a>
+			    </div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img src="img/banner.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img src="img/banner.jpg">
+			      </a>
+			    </div>
+			    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="#">
+			        <img src="img/banner.jpg">
+			      </a>
+			    </div>
+			  </div>
+			  <!--<div class="mui-slider-indicator">
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			  </div>-->
+			</div>
+			<!--中间两个按钮-->
+			<div id="top-one">
+				<!--渠道注册body-->
+				<div class="qudaozhuce">
+					<img src="img/index-hua1.png" />
+					<button type="button" class="mui-btn1" id="qudaozhuce">渠道注册</button>
+				</div>
+				<!--我的订单-->
+				<div class="mydingdan">
+					<img src="img/index-hua2.png" />
+					<button type="button" id="wodedingdan" class="mui-btn1">我的订单</button>
+				</div>
+			</div>
+			<!--产品分类导航条-->
+			<!--<div id="productClass">
+				<ul>
+					<li class="activePruduct">全部</li>
+					<li>茶饮酒品</li>
+					<li>海产水产</li>
+					<li>美妆护肤</li>
+				</ul>
+			</div>-->
+			<!--产品展示信息-->
+			<div class="productZhanshi">
+				<img src="img/haishen.jpg"/>
+				<div class="jianjie">
+					<span class="biaoti">威海野生刺参 海鲜干货</span><br />
+					<span class="jieshao">形态美观，色泽纯正</span><br />
+					<span class="jiage">￥3999.99</span>
+				</div>
+				<button class="dinggou">订购</button>
+			</div>
+			<div class="productZhanshi">
+				<img src="img/mianshuang.jpg"/>
+				<div class="jianjie">
+					<span class="biaoti">SK-ll大红瓶50g补水保湿面霜</span><br />
+					<span class="jieshao">补水，保湿，提拉紧致</span><br />
+					<span class="jiage">￥860.00</span>
+				</div>
+				<button class="dinggou">订购</button>
+			</div>
+			<div class="productZhanshi">
+				<img src="img/duanxiu.jpg"/>
+				<div class="jianjie">
+					<span class="biaoti">白色休闲上衣女夏季短袖流苏</span><br />
+					<span class="jieshao">舒适面料，舒适透气</span><br />
+					<span class="jiage">￥88.00</span>
+				</div>
+				<button class="dinggou" id="duanxiu">订购</button>
+			</div>
+			<div class="liukong"></div>
+			
+			<!--首页弹窗-->
+			<div id="popLayerrenwua"></div>
+			<div id="panelrenwua">
+				<div class="daohangtiao">
+					<ul class="daohangneibu">
+						<li @click="active=0" :class="{'activediqu':active===0}">全部<span class="mui-icon iconfont iconarrfill_u-copy"></span></li>
+						<li @click="active=1" :class="{'activediqu':active===1}">价格<span class="mui-icon iconfont iconshangjiantou3"></span><span class="mui-icon iconfont iconsjt"></span></li>
+						<li @click="active=2" :class="{'activediqu':active===2}">销量</li>
+						<li @click="active=3" :class="{'activediqu':active===3}">地区<span class="mui-icon iconfont iconloudou"></span></li>
+					</ul>
+				</div>
+				<ul class="mui-table-view">
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">北京</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">青岛</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">广州</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">上海</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">杭州</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">苏州</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">南京</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">济南</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">武汉</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">昆明</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			    </ul>
+			</div>
+		</div>
+		
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab" style="box-shadow: none;background-color: white;">
+			<a id="index" class="mui-tab-item mui-active" href="index.html">
+				<span class="mui-icon iconfont iconshouye" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="task" class="mui-tab-item" href="task.html">
+				<span class="mui-icon iconfont iconrenwu" style="font-size: 19px;"><span class="mui-badge">2</span></span>
+				<span class="mui-tab-label">任务</span>
+			</a>
+			<a id="incom" class="mui-tab-item" href="incom.html">
+				<span class="mui-icon iconfont iconshouyi"></span>
+				<span class="mui-tab-label">收益</span>
+			</a>
+			<a id="myhome" class="mui-tab-item" href="myhome.html">
+				<span class="mui-icon iconfont iconwode" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+//			轮播图
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+//			定义a标签链接
+			mui('nav').on('tap','a',function(){document.location.href=this.href;});
+			
+//			渠道注册
+			var qudaozhuce = document.getElementById("qudaozhuce");
+			qudaozhuce.onclick = function(){
+				mui.openWindow({  
+    				url: "ChannelRegistration.html",
+				})
+			}
+			
+//			短袖订购
+			var duanxiu = document.getElementById("duanxiu");
+			duanxiu.onclick = function(){
+				mui.openWindow({  
+    				url: "order.html",
+				})
+			}
+			
+//			我的订单
+			var wodedingdan = document.getElementById("wodedingdan");
+			wodedingdan.onclick = function(){
+				mui.openWindow({  
+    				url: "wodedingdan.html",
+				})
+			}
+			
+//			首页弹窗
+			$("#flipa").click(function(e){
+				$("#popLayerrenwua").toggle();
+			    $("#panelrenwua").toggle(200);
+			    $("#flipa .flipa").toggleClass('xuanzhuan');
+			    e.stopPropagation();
+			});
+			$("#popLayerrenwua").click(function(){
+				$("#popLayerrenwua").fadeOut(300);
+			    $("#panelrenwua").fadeOut(300);
+		    	$("#flipa .flipa").removeClass('xuanzhuan');
+			});
+			
+			var vm = new Vue({
+		        el: '#panelrenwua',
+		        data: {
+		            "active": 3
+		        },
+		    })
+		</script>
+	</body>
+
+</html>

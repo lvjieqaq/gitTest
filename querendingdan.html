@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>确认订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/wodedingdan.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*支付方式右边按钮背景图片切换*/
+			.weixinzhifubao .zhifuanniuacitve{
+				background-image: url(img/zhifub.png);
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav" id="querendingdantop">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">确认订单</h1>
+		</header>
+		
+		<div class="mui-content">
+		    <div class="dingdanspxx">
+				<div class="spxi">
+					<span>商品信息</span>
+				</div>
+				<!--订单商品信息-->
+				<div class="shangpinxinxibottom">
+		    	    <img src="img/duanxiu.jpg" />
+		    	    <div class="kuanhao">
+		    	    	<span>款号：SQ19041</span><br />
+		    	    	<span>圆牌号：041</span><br />
+		    	    	<span>外套</span>
+		    	    </div>
+		    	    <div class="chanpinjiage">
+		    	    	<span>￥88.88</span><br />
+		    	    	<span class="ersan">10件</span><br />
+		    	    	<span class="ersan">￥880.88</span>
+		    	    </div>
+			    </div>
+		    </div>
+		    <!--收货地址-->
+		    <div class="shouhuodizhi">
+		    	<div class="shdz">
+					<span>收货地址</span>
+				</div>
+				<div class="shdzbottom" id="shouhuodizhi">
+					<span>代用名</span>
+					<span>13888888888</span><br />
+					<span>湖北武汉市洪山区楚平路南湖7号楼204</span>
+					<span class="youjiantou mui-icon mui-icon-arrowright"></span>
+				</div>
+		    </div>
+		    <!--支付方式-->
+		    <div class="zhifufangshi">
+		    	<div class="shdz">
+					<span>支付方式</span>
+				</div>
+				<div class="weixinzhifubao" id="content">
+					<ul class="mui-table-view">
+				        <li class="mui-table-view-cell">
+				            <a @click="active=0">
+				            	<span class="mui-icon iconfont iconz-alipay" style="color: #009fe8;font-size: 0.38rem;"></span>
+				                	支付宝支付
+				                <div :class="{'zhifuanniuacitve':active===0}" class="zhifuanniu"></div>
+				            </a>
+				        </li>
+				        <li class="mui-table-view-cell">
+				            <a @click="active=1">
+				            	<span class="mui-icon iconfont iconweixinzhifu" style="color: #44af35;font-size: 0.38rem;"></span>
+				                	微信支付
+				                <div :class="{'zhifuanniuacitve':active===1}" class="zhifuanniu"></div>
+				            </a>
+				        </li>
+				    </ul>
+		    	</div>
+		    </div>
+		    
+		    <!--底部确认支付-->
+		    <div class="querenzhifu">
+		    	<div class="heji">
+		    		<div>合计：<span class="chengse">￥500</span></div>
+		    	</div>
+		    	<div class="jiesuan1">
+		    		<button type="button" id="jiesuan">确认支付</button>
+		    	</div>
+		    </div>
+		</div>
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			var shouhuodizhi = document.getElementById("shouhuodizhi");
+			shouhuodizhi.onclick = function(){
+				mui.openWindow({  
+    				url: "shouhuodizhi.html",
+				})
+			}
+			
+			var vm = new Vue({
+		        el: '#content',
+		        data: {
+		            "active": 0
+		        },
+		    })
+		</script>
+	</body>
+
+</html>

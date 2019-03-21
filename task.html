@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>任务</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tanchuang.css"/>
+		<style type="text/css">
+			.mui-bar-tab .mui-tab-item.mui-active {
+		    	color: #ffcd00;
+			}
+			.xuanzhuan{
+				transform:rotate(180deg);
+				-webkit-transform: rotate(180deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部导航-->
+		<header class="mui-bar mui-bar-nav">
+			<!--城市选择下拉列表-->
+			<div id="flip" style="position: fixed;width: 1.4rem;height: 0.8rem;">
+				<span class="mui-btnab">食品类</span><img class="flip" src="img/xialajiantou.png" />
+			</div>
+			<!--搜索产品-->
+			<div class="mui-input-row mui-search">
+			    <input type="search" class="mui-input-clear" placeholder="搜索产品">
+			</div>
+			
+		</header>
+		<!--主体部分-->
+		<div class="mui-content">
+		    <!--banner轮播图-->
+		    <div id="slider" class="mui-slider" >
+			  <div class="mui-slider-group mui-slider-loop">
+			    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="#">
+			        <img src="img/renwubanner.jpg">
+			      </a>
+			    </div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img src="img/renwubanner.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img src="img/renwubanner.jpg">
+			      </a>
+			    </div>
+			    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			      <a href="#">
+			        <img src="img/renwubanner.jpg">
+			      </a>
+			    </div>
+			  </div>
+			  <!--<div class="mui-slider-indicator">
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			  </div>-->
+			</div>
+			<!--商家须知-->
+			<div id="shangjiaxzbg">
+				<div class="shangjiaxuzhi">
+					<button id="sjxz" type="button" class="mui-btn">立即查看>></button>
+				</div>
+			</div>
+			<!--任务列表-->
+			<div class="renwuliebiao">
+				<img src="img/renwuimg1.png"/>
+				<div class="renwubiaoti">
+					<span class="biaoti">2018冬季新款欧货面包茧型羽绒服中长款宽松时尚</span><br />
+					<span class="shijian">发布时间：11月12日</span><br />
+				</div>
+				<div class="renwuanniu">
+					<button class="yuanjiaoButton" onclick="popBox()">领取任务</button>
+					<button class="yuanjiaoButton" id="xiangqing">了解详情</button>
+				</div>
+			</div>
+			<div class="renwuliebiao">
+				<img src="img/renwuimg2.png"/>
+				<div class="renwubiaoti">
+					<span class="biaoti">初赋活抗皱紧致护肤品套装女士补水保湿水乳化妆品</span><br />
+					<span class="shijian">发布时间：11月12日</span><br />
+				</div>
+				<div class="renwuanniu">
+					<button class="yuanjiaoButton" onclick="popBox()">领取任务</button>
+					<button class="yuanjiaoButton">了解详情</button>
+				</div>
+			</div>
+			
+			<div style="width: 100%;height: 2rem;"></div>
+			
+			
+			<!--任务分类弹窗-->
+			<div id="popLayerrenwu"></div>
+			<div id="panelrenwu">
+				<ul class="mui-table-view">
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">美妆护肤</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">水产海产</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">禽畜肉类</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">新鲜水果</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">潮流女装</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">潮流男装</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">儿童玩具</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			         <li class="mui-table-view-cell">
+			            <a>
+			                <span class="zuoa">保健药品</span>
+			                <span class="youa">>></span>
+			            </a>
+			        </li>
+			    </ul>
+			</div>
+			
+			<!--领取任务弹窗-->
+			<div id="popLayerTask"></div>
+			<div id="popBoxTask">
+				<div class="neikuang">
+					<div class="lingqutopbg">
+						<p>已经有三千五百人领取</p>
+					</div>
+					<ul>
+						<li>任务名称： 红酒酒水类</li>
+						<li>主要销售区域： 山东 青岛</li>
+					</ul>
+					<div class="lingquanniu">
+						<button>放弃任务</button>
+						<button>领取任务</button>
+					</div>
+				</div>
+				<!--关闭按钮-->
+				<div class="renwuclose">
+					<div onclick="closeBox()" class="guanbi"><span>X</span></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab" style="box-shadow: none;background-color: white;">
+			<a id="index" class="mui-tab-item" href="index.html">
+				<span class="mui-icon iconfont iconshouye" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="task" class="mui-tab-item mui-active" href="task.html">
+				<span class="mui-icon iconfont iconrenwu" style="font-size: 19px;"><span class="mui-badge">2</span></span>
+				<span class="mui-tab-label">任务</span>
+			</a>
+			<a id="incom" class="mui-tab-item" href="incom.html">
+				<span class="mui-icon iconfont iconshouyi"></span>
+				<span class="mui-tab-label">收益</span>
+			</a>
+			<a id="myhome" class="mui-tab-item" href="myhome.html">
+				<span class="mui-icon iconfont iconwode" style="font-size: 20px;"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			
+			mui('nav').on('tap','a',function(){document.location.href=this.href;});
+			
+			
+			var shangjiaxuzhi = document.getElementById("sjxz");
+			shangjiaxuzhi.onclick = function(){
+				mui.openWindow({  
+    				url: "shangjiaxuzhi.html",
+				})
+			}
+			
+			var xiangqing = document.getElementById("xiangqing");
+			xiangqing.onclick = function(){
+				mui.openWindow({  
+    				url: "renwuXiangqingChanpin.html",
+				})
+			}
+//			任务分类弹窗
+			$("#flip").click(function(e){
+				$("#popLayerrenwu").toggle();
+			    $("#panelrenwu").toggle(200);
+			    $("#flip .flip").toggleClass('xuanzhuan');
+			    e.stopPropagation();
+			});
+			$("body").click(function(e){
+			    if($(e.target).attr('id')!='panelrenwu'){
+					$("#popLayerrenwu").fadeOut(300);
+				    $("#panelrenwu").fadeOut(300);
+			    	$("#flip .flip").removeClass('xuanzhuan');
+				}
+			});
+			
+//			领取任务弹窗
+			/*点击弹出按钮*/
+		    function popBox() {
+		        $("#popBoxTask").css("display","block");
+		        $("#popLayerTask").css("display","block");
+		    };
+		    /*点击关闭按钮*/
+		    function closeBox() {
+		        $("#popBoxTask").css("display","none");
+		        $("#popLayerTask").css("display","none");
+		    }
+		</script>
+	</body>
+
+</html>

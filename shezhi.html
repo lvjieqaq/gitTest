@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/myhome.css"/>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav shezhi">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">设置</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="shezhibottom">
+			    <ul class="mui-table-view shangbian">
+		            <li class="mui-table-view-cell">
+		                <a>
+		            		<span>账户</span>
+		            		<span style="float: right;">梦醒时分</span>
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    <span>头像</span>
+		                    <img src="img/touxiang.jpg" />
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right" id="wodedizhi">
+		                    <span>我的收货地址</span>
+		                </a>
+		            </li>
+		        </ul>
+		        
+		        <ul class="mui-table-view xiabian">
+		                <li class="mui-table-view-cell">
+		                    <a class="mui-navigate-right">
+		                     	<span>清除缓存</span>
+		                     	<span class="huancun">783.40KB</span>
+		                    </a>
+		                </li>
+		                <li class="mui-table-view-cell">
+		                    <a class="mui-navigate-right">
+		                        <span>版本更新</span>
+		                    </a>
+		                </li>
+		            </ul>
+	        </div>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			var wodedizhi = document.getElementById("wodedizhi");
+			wodedizhi.onclick = function(){
+				mui.openWindow({  
+    				url: "shouhuodizhi.html",
+				})
+			}
+		</script>
+	</body>
+
+</html>

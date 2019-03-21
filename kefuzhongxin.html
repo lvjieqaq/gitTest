@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myhome.css"/>
+	</head>
+
+	<body style="background-color: #f7f7f7;">
+		
+		<header class="mui-bar mui-bar-nav kefutop">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">客服中心</h1>
+		</header>
+		
+		<div class="mui-content">
+		    <section class="chat-box">
+			    <!--<span class="chat-trip">此刻对方忙碌，请留言</span>-->
+			    
+			    	
+			    <!--初始化消息-->
+			    <div class="bubbleDiv1">
+					<div class="bubbleItem">
+		            	<span class="bubble leftBubble">亲，小包猜你想咨询一下问题？你也可以描述你的问题，小包来帮你解答，比如”金融 基本知识是什么？“<span class="topLevel"></span></span>
+		            </div>
+			    </div>
+			    <div class="bubbleDiv">
+			    	<div class="doctor-head">
+		            	<img src="img/kefu1.png" alt="doctor"/>
+		            </div>
+					<div class="bubbleItem" style="width: 100%;">
+		            	<span class="bubble leftBubble">
+		            		<ul>
+		            			<li><a><div class="wenhao">?</div>如何申请退款？</a></li>
+		            			<li><a><div class="wenhao">?</div>如何申请退款？</a></li>
+		            			<li><a><div class="wenhao">?</div>如何申请退款？</a></li>
+		            		</ul>
+		            			
+		            		<!--聊天框小箭头-->
+		            		<span class="topLevel"></span>
+		            	</span>
+		            </div>
+			    </div>
+			    
+			    <div style="width: 100%;height: 75px;background-color: #f7f7f7;"></div>
+			</section>
+			<footer class="chat-edit clearfix">
+			    <p class="chat-info" placeholder="想咨询他什么内容..." contenteditable="true"></p>
+			    <span class="uploadImg fl"><input type="file" name="uploadfile" class="uploadfile"></span>
+			    <button class="send-btn fr">发送</button>
+			</footer>
+
+		</div>
+		
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/chat.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			$(document).ready(function(){
+		        /*
+		                       左侧 接收别人信息 调用，三个参数：leftBubble，头像路径，内容
+		         chat(element,imgSrc,doctextContent)
+		         */
+//		        chat("leftBubble","img/kefu1.png","亲，小包猜你想咨询一下问题？你也可以描述你的问题，小包来帮你解答，比如”金融 基本知识是什么？“");
+//		        chat("leftBubble","","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+//		        chat("leftBubble","images/head_portrait.png","您好，欢迎关注博客：http://write.blog.csdn.net/postlist");
+		
+		        $(".send-btn").click(function(){
+		            //右侧 自己发 调用，只需填一个参数"rightBubble"
+		            chat("rightBubble","img/kefu1.png");
+		            
+		            //清空输入框
+		            $('.chat-info').html('');
+		
+		        })
+		    })
+		</script>
+	</body>
+
+</html>
